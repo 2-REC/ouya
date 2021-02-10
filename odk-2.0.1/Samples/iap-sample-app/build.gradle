@@ -1,0 +1,74 @@
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.squareup.gradle:gradle-android-test-plugin:0.9.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'android'
+apply plugin: 'android-test'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 'android-16'
+    buildToolsVersion '19.0.1'
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../sample.keystore")
+            storePassword "password"
+            keyAlias "iap"
+            keyPassword "password"
+        }
+        release {
+            storeFile file("../sample.keystore")
+            storePassword "password"
+            keyAlias "iap"
+            keyPassword "password"
+        }
+    }
+
+    defaultConfig {
+        targetSdkVersion 16
+        minSdkVersion 16
+
+        versionName '1.0'
+        versionCode 1
+
+        packageName 'tv.ouya.sample'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    testCompile fileTree(dir: 'libs/test', include: ['*.jar'])
+}

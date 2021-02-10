@@ -1,0 +1,11 @@
+.gradle/
+.settings/
+build/
+gen/
+out/
+build/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/uiDesigner.xml
+.classpath
+.project

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CC Sample App</string>
+    <string name="layer_position">Layer %1$d/%2$d</string>
+    <string name="browse_online">Browse Online</string>
+    <string name="browse_local">Browse Local</string>
+    <string name="online">Online</string>
+    <string name="local">Local</string>
+    <string name="emblem_title">Emblem Title</string>
+    <string name="emblem_desc">Emblem Description</string>
+    <string name="no_emblems">No emblems installed.</string>
+    <string name="new_emblem">New Emblem</string>
+    <string name="move">Move</string>
+    <string name="scale">Scale</string>
+    <string name="rotate">Rotate</string>
+</resources>
