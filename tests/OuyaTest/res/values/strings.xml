@@ -1,0 +1,17 @@
+<resources>
+
+  <string name="app_name">Ouya Test</string>
+
+  <string name="menu_title">Welcome to OUYAtron!</string>
+  <string name="new_game">New Game</string>
+  <string name="options">Options</string>
+  <string name="quit">Quit</string>
+  <string name="options_title">Welcome to OUYAtron!</string>
+  <string name="loading_purchases">Loading purchases...</string>
+  <string name="level">Choose your level:</string>
+  <string name="level_freedom">Freedom</string>
+  <string name="level_alleyway">Alleyway</string>
+  <string name="level_boxy">Boxy</string>
+  <string name="back">Back to Main Menu</string>
+
+</resources>
